@@ -1,0 +1,29 @@
+﻿<Window x:Class="PWęgrzyniak_Zadanie1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:VM="clr-namespace:PWęgrzyniakZadanie1.ViewModels"    
+        xmlns:local="clr-namespace:PWęgrzyniak_Zadanie1"
+        mc:Ignorable="d"
+         Title="ProduktyInfo" Height="500" Width="500">
+
+    <Window.DataContext>
+        <VM:ListProduktsVM />
+    </Window.DataContext>
+
+    <DockPanel LastChildFill="True" Background="DarkGray">
+
+        <TextBlock FontSize="25" DockPanel.Dock="Top" Margin ="10 10 10 10">
+            Produkty z informacją o zmianach:
+        </TextBlock>
+
+        <DataGrid x:Name="ListProduktsXAML" DockPanel.Dock="Top" Margin="10 10 10 10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Nazwa}" Width="*" Header="Nazwa produktu" />
+                <DataGridTextColumn Binding="{Binding IleZmian}" Width="100" Header="Liczba zmian" />
+                <DataGridTextColumn Binding="{Binding OstatniaZmiana}" Width="*" Header="Ostatnia zmiana" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
