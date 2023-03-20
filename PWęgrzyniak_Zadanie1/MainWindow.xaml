@@ -18,7 +18,7 @@
             Produkty z informacją o zmianach:
         </TextBlock>
 
-        <DataGrid x:Name="ListProduktsXAML" DockPanel.Dock="Top" Margin="10 10 10 10">
+        <DataGrid IsReadOnly="True" ItemsSource="{Binding Pils}" AutoGenerateColumns="False" DockPanel.Dock="Top" Margin="10 10 10 10">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Nazwa}" Width="*" Header="Nazwa produktu" />
                 <DataGridTextColumn Binding="{Binding IleZmian}" Width="100" Header="Liczba zmian" />

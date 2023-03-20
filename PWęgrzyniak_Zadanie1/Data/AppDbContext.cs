@@ -21,10 +21,8 @@ namespace PWęgrzyniak_Zadanie1.Data
         public DbSet<NarzedzieUzycie> NarzedzieUzycies { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //optionsBuilder.UseSqlServer(@"Data Source=WYMIATACZ\SQLEXPRESS;Initial Catalog=Zadanie1DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        {            
             optionsBuilder.UseSqlServer(CONNECTION_STRING);
-
         }
     }
 }

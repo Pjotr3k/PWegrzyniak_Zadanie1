@@ -1,5 +1,4 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using PWęgrzyniak_Zadanie1.Data;
 using PWęgrzyniak_Zadanie1.Models;
 using System.Collections.Generic;
