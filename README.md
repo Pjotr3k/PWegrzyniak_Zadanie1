@@ -4,4 +4,5 @@ This task is a WPF application. This app organizes data about products and chang
 **Installation:**
 - create a database
 - run query included in zad1.sql file
+- set the connection string in Data/AppDbContext.cs to connection string to your database
 - compile and run the application, database should be automatically seeded
